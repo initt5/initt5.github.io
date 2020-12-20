@@ -1,5 +1,4 @@
 body {
-    z-index: 10;
     background: #EDEBED url('nature.jpeg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -50,11 +49,9 @@ body {
     overflow: hidden;
     width: 88px;
     height: 88px;
-    z-index: 0;
     font-family: sans-serif;
     font-size: 80px;
     display: inline;
-    margin-right: 80px;
     box-shadow: 0px 5px 25px rgb(0, 0, 0, 0.5);
 }
 @keyframes firststage {

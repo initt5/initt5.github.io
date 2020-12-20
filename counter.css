@@ -44,7 +44,23 @@ body {
     left: 30%;
     top: 22%;
 }
-
+#button {
+    color: white;
+    font-weight: bold;
+    background-color: #5F7C50;
+    border: 2px solid #304924;
+    border-radius: 12px;
+    outline: none;
+    text-align: center;
+}
+#datetime {
+    border: 2px solid #4E6940;
+    color: white;
+    background: transparent;
+    border-radius: 12px;
+    outline: none;
+    text-align: center;
+}
 .time {
     overflow: hidden;
     width: 88px;

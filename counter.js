@@ -21,7 +21,6 @@
         const nowDate = `${date.getFullYear()}-${transformDate(date.getMonth()+1)}-${transformDate(date.getDate())}T${transformDate(date.getHours())}:${transformDate(date.getMinutes())}:${transformDate(date.getSeconds())}`;
         return nowDate
     }
-<<<<<<< HEAD
     function changeTime(entity) {
         let timeContent = document.createElement('div');
         let timeBox = document.querySelector(`#${entity[0]}-box`);
@@ -41,36 +40,6 @@
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
         const presentTime = new Map([['weeks', weeks], ['days', days], ['hours', hours], ['minutes', minutes], ['seconds', seconds]]);
-=======
-
-    function animateTransition(e, remove) { 
-        let velocity = parseInt(e.style.top);
-        e.id = `animated-${e.id}`;
-        let animation = setInterval(function() {
-            if (velocity <= -200) {
-                clearInterval(animation);
-                e.remove()
-                return
-            }
-            move();
-        }, 30);
-        function move() {
-            velocity -= 3;
-            e.style.top = `${velocity}px`;
-        }
-    }
-
-    function countTime(value) {
-        const now = new Date(getNow());
-        const date = new Date(value);
-        const difference = date-now;
-        const weeks = Math.floor(difference / (1000*3600*24*7));
-        const days = Math.floor((difference % (1000*3600*24*7)) / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-        const time = new Map([['weeks', weeks], ['days', days], ['hours', hours], ['minutes', minutes], ['seconds', seconds]]);
->>>>>>> e850950212dc29579380c8559e38bab3790da4af
         if (weeks >= 0 && days >= 0 && minutes >= 0 && seconds >= 0 && hours >= 0) {
             const node = document.querySelector('.time');
             if (!node) {
@@ -87,10 +56,7 @@
                     if (document.querySelector(`#${entity[0]}`)){
                         let previousElement = document.querySelector(`#${entity[0]}`);
                         if (previousElement.classList.contains('content')) {
-<<<<<<< HEAD
                             setTimeout(() => previousElement.remove(), 1000);
-=======
->>>>>>> e850950212dc29579380c8559e38bab3790da4af
                             previousElement.className = 'animate';
                         }
                     }

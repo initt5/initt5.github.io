@@ -23,7 +23,6 @@
         return today
     }
 
-    // DO SECOND FUNCTION WHICH WILL SUPPORT CLONE AND NORMAL NODE!
     function animateTransition(e, remove) { 
         let velocity = parseInt(e.style.top);
         e.id = `animated-${e.id}`;
@@ -41,7 +40,6 @@
         }
     }
 
-    //I'm sure that this can be done 10x times better
     function countTime(value) {
         const now = new Date(getNow());
         const date = new Date(value);
@@ -69,7 +67,6 @@
                     if (document.querySelector(`#${entity[0]}`)){
                         let previousElement = document.querySelector(`#${entity[0]}`);
                         if (previousElement.classList.contains('content')) {
-                            console.log(previousElement);
                             previousElement.className = 'animate';
                         }
                     }

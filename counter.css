@@ -1,0 +1,75 @@
+body {
+    z-index: 10;
+    background: #EDEBED url('nature.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#date-choice {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+#stop {
+    display: none;
+    transform: translate(-50%, -50%);
+}
+#seconds-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 70%;
+    top: 22%;
+}
+#minutes-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 60%;
+    top: 22%;
+}
+#hours-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 22%;
+}
+#days-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 40%;
+    top: 22%;
+}
+#weeks-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 30%;
+    top: 22%;
+}
+
+.time {
+    overflow: hidden;
+    width: 88px;
+    height: 88px;
+    z-index: 0;
+    font-family: sans-serif;
+    font-size: 80px;
+    display: inline;
+    margin-right: 80px;
+    box-shadow: 0px 5px 25px rgb(0, 0, 0, 0.5);
+}
+@keyframes firststage {
+    from {top: 75px;}
+    to {top: 0px;}
+}
+.content {
+    position: absolute;
+    animation: firststage 0.3s;
+}
+@keyframes secondstage {
+    from {top: 0px;}
+    to {top: -75px;}
+}
+.animate {
+    position: absolute;
+    animation: secondstage 0.4s;
+}

@@ -10,10 +10,6 @@ body {
     top: 60%;
     transform: translate(-50%, -50%);
 }
-#stop {
-    display: none;
-    transform: translate(-50%, -50%);
-}
 #seconds-box {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -60,10 +56,11 @@ body {
     outline: none;
     text-align: center;
 }
+
 .time {
     overflow: hidden;
     width: 88px;
-    height: 88px;
+    min-height: 88px;
     font-family: sans-serif;
     font-size: 80px;
     display: inline;

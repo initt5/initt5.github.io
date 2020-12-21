@@ -22,12 +22,20 @@
         return nowDate
     }
     function changeTime(entity) {
-        let timeContent = document.createElement('div');
+        let timeContent = document.createElement('span');
         let timeBox = document.querySelector(`#${entity[0]}-box`);
         timeContent.innerHTML = `${transformDate(entity[1])}`;
         timeContent.id = entity[0];
         timeContent.style.top = '75px';
         timeContent.className = 'content';
+        if (entity[0] == 'weeks' && String(entity[1]).length > 2) {
+            console.log(`${String(entity[1])}`)
+            timeContent.style.fontSize = `${80 - (14*(String(entity[1]).length-1))}px`;
+            timeContent.style.lineHeight = `${100+(30*(String(entity-1).length-1)*(String(entity-1).length-2))}%`
+        }
+        else {
+
+        }
         timeBox.appendChild(timeContent);
     }
     function countTime(formValue) {

@@ -8,11 +8,16 @@
     #primary { width:100%; }
     #secondary { width:100%; margin:0; border:none; }
 }
+
 body {
     background: #EDEBED url('nature.jpeg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+#clock {
+    min-width: 800px;
+    min-height: 600px;
 }
 #date-choice {
     position: absolute;
@@ -21,7 +26,7 @@ body {
     transform: translate(-50%, -50%);
 }
 #seconds-box {
-    position: absolute;
+    position: fixed;
     transform: translate(-50%, -50%);
     left: 70%;
     top: 22%;
@@ -68,6 +73,8 @@ body {
 }
 
 .time {
+    margin-left:auto;
+    margin-right:auto;
     overflow: hidden;
     width: 88px;
     min-height: 88px;

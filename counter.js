@@ -71,11 +71,13 @@
             }
                 oldTime = new Map(presentTime);
 
-        }
-        if (weeks == 0 && days == 0 && minutes == 0 && seconds == 0 && hours == 0) {
-            localStorage.removeItem('date');
-            clockElement.innerHTML = '';
-        }
+        } else {
+                localStorage.removeItem('date');
+                clockElement.innerHTML = '';
+                clearInterval(timerInterval);
+                oldTime = new Map();
+        } 
+            
     }
     window.addEventListener('animationend', () => {
         if (document.querySelector('.content')) {
@@ -91,10 +93,10 @@
         }
     });
     form.button.addEventListener('click', () => {
-        const date = form.datetime.formValue;
+        const date = form.datetime.value;
         if (!localStorage.getItem('date')) {
             localStorage.setItem('date', date);
-            timerInterval = setInterval(() => countTime(date), 500);
+            timerInterval = setInterval(() =>   countTime(date), 500);
         } else {
             localStorage.removeItem('date');
             localStorage.setItem('date', date);
@@ -106,7 +108,7 @@
     window.addEventListener('load', () => {
         const date = localStorage.getItem('date');
         if (localStorage.getItem('date') != null) {
-            form.datetime.formValue = date;
+            form.datetime.value = date;
             clearInterval(timerInterval);
             timerInterval = setInterval(() => countTime(date), 500);
         } 

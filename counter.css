@@ -47,14 +47,13 @@ body {
 #button {
     color: white;
     font-weight: bold;
-    background-color: #5F7C50;
-    border: 2px solid #304924;
+    background-color: #4d6441;
     border-radius: 12px;
     outline: none;
     text-align: center;
 }
 #datetime {
-    border: 2px solid #4E6940;
+    border: 2px solid #475c3d;
     color: white;
     background: transparent;
     border-radius: 12px;

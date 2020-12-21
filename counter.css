@@ -15,10 +15,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#clock {
-    min-width: 800px;
-    min-height: 600px;
-}
+
 #date-choice {
     position: absolute;
     left: 50%;
